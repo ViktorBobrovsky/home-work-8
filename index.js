@@ -1,9 +1,9 @@
-function setSelector(selector,text){
-	var text;
-	var tag = document.querySelector(selector);
-	tag.innerText = text;
-}
-setSelector("p","Hello world")
 
+function setTextAll(selector,text){
+	var myArray = document.querySelectorAll(selector);
+	myArray.forEach(function(item,yy,iii){
+		item.innerHTML = text;
+	});
+};
 
-
+setTextAll("p","New text")
